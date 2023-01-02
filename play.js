@@ -9,3 +9,29 @@ function getComputerChoice(){
             return "scissors";
         }
 }
+
+
+
+function playRound(playerSelection, getComputerChoice){
+
+    if(playerSelection.toUpperCase() == "ROCK"){
+        if(getComputerChoice.toUpperCase() == "SCISSORS"){
+            return "player"
+        }else{
+            return "computer"
+        }
+    }else if(playerSelection.toUpperCase() == "PAPER"){
+        if(getComputerChoice.toUpperCase() == "ROCK"){
+            return "player"
+        }else{
+            return "computer"
+        }
+    }else{
+        if(getComputerChoice.toUpperCase() == "PAPER"){
+            return "player"
+        }else{
+            return "computer"
+        }
+    }
+    
+}
