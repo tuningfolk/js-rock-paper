@@ -52,6 +52,9 @@ function playRound(playerSelection){
 }
 
 function check(winner){
+    
+    document.getElementById("Result").innerHTML = "";
+
     if(winner =='player'){
         player++;
     }else if(winner == 'computer'){
