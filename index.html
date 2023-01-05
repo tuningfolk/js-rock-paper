@@ -5,9 +5,14 @@
         <script src="play.js"></script>
     </head>
     <body>
-        <button onclick="document.getElementById('demo')">Rock</button>
-        <button onclick="document.getElementById('demo')">Paper</button>
-        <button onclick="document.getElementById('demo')">Scissors</button>
+        <button onclick="check(playRound('rock'))">Rock</button>
+        <button onclick="check(playRound('paper'))">Paper</button>
+        <button onclick="check(playRound('Scissors'))">Scissors</button>
+        <p id="comp"></p>
+        <p id="winner"></p>
+        <p id="num_of_rounds"></p>
+        <span id="player"></span>
+        <span id="computer"></span>
     </body>
 
 </html>
