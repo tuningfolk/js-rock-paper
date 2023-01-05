@@ -1,6 +1,7 @@
 var i = 0;
 var player = 0;
 var computer = 0;
+var draw = 0;
 var computerSelection;
 
 function getComputerChoice(){
@@ -23,21 +24,27 @@ function playRound(playerSelection){
 
     if(playerSelection.toUpperCase() == "ROCK"){
         if(computerSelection.toUpperCase() == "SCISSORS"){
-            return "player"
+            return "player";
+        }else if(computerSelection.toUpperCase() == "PAPER"){
+            return "computer";
         }else{
-            return "computer"
+            return "draw"
         }
     }else if(playerSelection.toUpperCase() == "PAPER"){
         if(computerSelection.toUpperCase() == "ROCK"){
-            return "player"
+            return "player";
+        }else if(computerSelection.toUpperCase() == "SCISSORS"){
+            return "computer";
         }else{
-            return "computer"
+            return "draw";
         }
     }else{
         if(computerSelection.toUpperCase() == "PAPER"){
-            return "player"
+            return "player";
+        }else if(computerSelection.toUpperCase() == "ROCK"){
+            return "computer";
         }else{
-            return "computer"
+            return "draw";
         }
     }
 
@@ -47,11 +54,13 @@ function playRound(playerSelection){
 function check(winner){
     if(winner =='player'){
         player++;
-    }else{
+    }else if(winnder == 'computer'){
         computer++;
-    }
+    }else{
+        draw++;
+    } 
     document.getElementById("comp").innerHTML = computerSelection;
     document.getElementById("winner").innerHTML = winner;
-    document.getElementById("num_of_rounds").innerHTML = player+computer;
+    document.getElementById("num_of_rounds").innerHTML = player+computer+draw;
 }
 
