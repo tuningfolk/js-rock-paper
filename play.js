@@ -51,8 +51,8 @@ function playRound(playerSelection){
 
 }
 
-function check(winner){
-    
+function game(winner){
+
     document.getElementById("Result").innerHTML = "";
 
     if(winner =='player'){
