@@ -61,7 +61,7 @@ function check(winner){
     } 
     document.getElementById("comp").innerHTML = computerSelection;
     document.getElementById("winner").innerHTML = winner;
-    document.getElementById("num_of_rounds").innerHTML = `rounds : ` + player + computer + draw;
+    document.getElementById("num_of_rounds").innerHTML = `rounds : ` + int(player) + int(computer) +int(draw);
     document.getElementById("player").innerHTML = "player : " + player;
     document.getElementById("computer").innerHTML = "computer : " + computer; 
 }
