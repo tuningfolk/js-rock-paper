@@ -54,13 +54,15 @@ function playRound(playerSelection){
 function check(winner){
     if(winner =='player'){
         player++;
-    }else if(winnder == 'computer'){
+    }else if(winner == 'computer'){
         computer++;
     }else{
         draw++;
     } 
     document.getElementById("comp").innerHTML = computerSelection;
     document.getElementById("winner").innerHTML = winner;
-    document.getElementById("num_of_rounds").innerHTML = player+computer+draw;
+    document.getElementById("num_of_rounds").innerHTML = "rounds : " + player+computer+draw;
+    document.getElementById("player").innerHTML = "player : " + player;
+    document.getElementById("computer").innerHTML = "computer : " + computer; 
 }
 
