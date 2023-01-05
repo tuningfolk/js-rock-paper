@@ -18,6 +18,8 @@ function getComputerChoice(){
 function playRound(playerSelection){
     i++;
     computerSelection = getComputerChoice();
+    console.log(computerSelection);
+    console.log(playerSelection);
 
     if(playerSelection.toUpperCase() == "ROCK"){
         if(computerSelection.toUpperCase() == "SCISSORS"){
