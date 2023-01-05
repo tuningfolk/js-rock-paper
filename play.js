@@ -59,10 +59,24 @@ function check(winner){
     }else{
         draw++;
     } 
-    document.getElementById("comp").innerHTML = computerSelection;
-    document.getElementById("winner").innerHTML = winner;
-    document.getElementById("num_of_rounds").innerHTML = `rounds : ` + int(player) + int(computer) +int(draw);
+    document.getElementById("comp").innerHTML = "Computer played " + computerSelection;
+    document.getElementById("winner").innerHTML = winner + " wins";
+    let plays = player+computer+draw;
+    
+    document.getElementById("num_of_rounds").innerHTML = `rounds : ` + plays;
     document.getElementById("player").innerHTML = "player : " + player;
     document.getElementById("computer").innerHTML = "computer : " + computer; 
+    if(plays == 5){
+        if(computer>player){
+            document.getElementById("Result").innerHTML = "Computer wins!";
+        }else if(player>computer){
+            document.getElementById("Result").innerHTML = "Player wins!";
+        }else{
+            document.getElementById("Result").innerHTML = "Draw!";
+        }
+        computer = 0;
+        player = 0;
+        draw = 0;
+    }
 }
 
