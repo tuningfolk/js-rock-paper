@@ -69,10 +69,11 @@ function game(winner){
     document.getElementById("num_of_rounds").innerHTML = `rounds : ` + plays;
     document.getElementById("player").innerHTML = "player : " + player;
     document.getElementById("computer").innerHTML = "computer : " + computer; 
-    if(plays == 5){
-        if(computer>player){
+    
+    if(player == 5 || computer == 5){
+        if(computer == 5){
             document.getElementById("Result").innerHTML = "Computer wins!";
-        }else if(player>computer){
+        }else if(player == 5){
             document.getElementById("Result").innerHTML = "Player wins!";
         }else{
             document.getElementById("Result").innerHTML = "Draw!";
